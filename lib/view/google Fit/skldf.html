@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Fit OAuth</title>
+</head>
+<body>
+    <h1>Google Fit OAuth</h1>
+
+    <button onclick="authorizeGoogleFit()">Authorize Google Fit</button>
+
+    <script>
+        const clientId = '73989493656-ue9v2k6okulnpt4a2jhl7q9ijv6sta70.apps.googleusercontent.com'; // Replace with your actual client ID
+        const redirectUri = 'https://www.nin.res.in'; // Replace with your actual redirect URI
+
+        function authorizeGoogleFit() {
+            // Generate a random state for security
+            const state = Math.random().toString(36).substring(2, 15);
+
+            // Create a PKCE code verifier and challenge
+            const codeVerifier = generateRandomString(128);
+            const codeChallenge = base64URLEncode(crypto.subtle.digest('SHA-256', new TextEncoder().encode(codeVerifier)));
+
+            // Build the authorization URL
+            const authorizationUrl = `https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=https://www.googleapis.com/auth/fitness.activity.read&state=${state}&code_challenge=${codeChallenge}&code_challenge_method=S256`;
+
+            // Redirect the user to the authorization URL
+            window.location.href = authorizationUrl;
+        }
+
+        function generateRandomString(length) {
+            const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let result = '';
+            for (let i = 0; i < length; i++) {
+                result += charset.charAt(Math.floor(Math.random() * charset.length));
+            }
+            return result;
+        }
+
+        function base64URLEncode(buffer) {
+            return btoa(String.fromCharCode.apply(null, new Uint8Array(buffer)))
+                .replace(/\+/g, '-')
+                .replace(/\//g, '_')
+                .replace(/=+$/, '');
+        }
+    </script>
+</body>
+</html>
