@@ -237,7 +237,7 @@ class _BloodPressureScreenState extends State<BloodPressureScreen> {
                                     height: 15,
                                     width: 150,
                                     backgroundColor: Colors.grey.shade100,
-                                    foregrondColor: Colors.purple,
+                                    foregroundColor: Colors.purple,
                                     ratio: percentAsDouble,
                                     direction: Axis.horizontal,
                                     curve: Curves.fastLinearToSlowEaseIn,

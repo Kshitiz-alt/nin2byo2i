@@ -237,7 +237,7 @@ class _OxygenLevelScreenState extends State<OxygenLevelScreen> {
                                     height: 15,
                                     width: 120,
                                     backgroundColor: Colors.grey.shade100,
-                                    foregrondColor: Colors.purple,
+                                    foregroundColor: Colors.purple,
                                     ratio: percentAsDouble,
                                     direction: Axis.horizontal,
                                     curve: Curves.fastLinearToSlowEaseIn,

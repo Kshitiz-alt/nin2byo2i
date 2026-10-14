@@ -24,34 +24,53 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'firebase_options.dart';
 
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   // WidgetsFlutterBinding.ensureInitialized();
+
+//   // await Firebase.initializeApp();
+
+//   // await Permission.activityRecognition.request();
+//   // await Permission.location.request();
+
+//   await Firebase.initializeApp(
+//     options: DefaultFirebaseOptions.currentPlatform,
+//   );
+//   SharedPreferences prefs = await SharedPreferences.getInstance();
+//   // final AuthRepo _authRepo = AuthRepo();
+//   await AuthRepo.checkTokenExpired();
+//   runApp(
+//     MaterialApp(
+//       home: SplashScreen(), // Display the SplashScreen as the first screen
+//     ),
+//   );
+
+//   // Delay for 2 seconds to show the splash screen
+//   await Future.delayed(const Duration(seconds: 1));
+
+//   runApp(MyApp(
+//     token: prefs.getString('token'),
+//   ));
+//   // DependencyInjection.init();
+// }
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // WidgetsFlutterBinding.ensureInitialized();
-
-  // await Firebase.initializeApp();
-
-  // await Permission.activityRecognition.request();
-  // await Permission.location.request();
 
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
   SharedPreferences prefs = await SharedPreferences.getInstance();
-  // final AuthRepo _authRepo = AuthRepo();
-  await AuthRepo.checkTokenExpired();
-  runApp(
-    MaterialApp(
-      home: SplashScreen(), // Display the SplashScreen as the first screen
-    ),
-  );
 
-  // Delay for 2 seconds to show the splash screen
-  await Future.delayed(const Duration(seconds: 1));
+  // Never let a network call block app startup
+  try {
+    await AuthRepo.checkTokenExpired().timeout(const Duration(seconds: 5));
+  } catch (e) {
+    debugPrint('checkTokenExpired failed or timed out: $e');
+  }
 
-  runApp(MyApp(
-    token: prefs.getString('token'),
-  ));
-  // DependencyInjection.init();
+  runApp(MyApp(token: prefs.getString('token')));
 }
 
 class MyApp extends StatefulWidget {

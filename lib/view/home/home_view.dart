@@ -4785,7 +4785,7 @@ class _HomeState extends State<Home> {
                                                     width: media.width * 0.07,
                                                     backgroundColor:
                                                         Colors.grey.shade100,
-                                                    foregrondColor:
+                                                    foregroundColor:
                                                         Colors.purple,
                                                     ratio:
                                                         fitnessData.percentage,
@@ -5583,7 +5583,7 @@ class _HomeState extends State<Home> {
                               //                 width: media.width * 0.07,
                               //                 backgroundColor:
                               //                     Colors.grey.shade100,
-                              //                 foregrondColor: Colors.purple,
+                              //                 foregroundColor: Colors.purple,
                               //                 ratio: fitnessData.percentage,
                               //                 direction: Axis.vertical,
                               //                 curve:
@@ -6435,7 +6435,7 @@ class _HomeState extends State<Home> {
                               //                 width: media.width * 0.07,
                               //                 backgroundColor:
                               //                     Colors.grey.shade100,
-                              //                 foregrondColor: Colors.purple,
+                              //                 foregroundColor: Colors.purple,
                               //                 ratio: fitnessData.percentage,
                               //                 direction: Axis.vertical,
                               //                 curve:

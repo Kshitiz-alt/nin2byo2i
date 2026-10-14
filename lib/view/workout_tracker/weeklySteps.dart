@@ -434,10 +434,10 @@ class _stepsWeekly extends State<stepsWeekly> {
                                           20, // Set the width of the progress bar
                                       backgroundColor:
                                           Color.fromARGB(255, 221, 220, 220),
-                                      // foregrondColor: index % 2 == 0
+                                      // foregroundColor: index % 2 == 0
                                       //     ? TColor.primaryColor1
                                       //     : TColor.secondaryColor1,
-                                      foregrondColor: TColor.primaryColor1,
+                                      foregroundColor: TColor.primaryColor1,
                                       ratio: ratio, // Set the ratio value
                                       direction: Axis
                                           .vertical, // Set direction to vertical

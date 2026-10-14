@@ -50,12 +50,20 @@ class DefaultFirebaseOptions {
     measurementId: 'G-CRL921C109',
   );
 
+  // static const FirebaseOptions android = FirebaseOptions(
+  //   apiKey: 'AIzaSyBEkitYHLjLP_Q400DDuISZm7PXxdZy0Oo',
+  //   appId: '1:95237292376:android:4e13728ffecba1f9af252d',
+  //   messagingSenderId: '95237292376',
+  //   projectId: 'nin2byo2i',
+  //   storageBucket: 'nin2byo2i.appspot.com',
+  // );
+
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBEkitYHLjLP_Q400DDuISZm7PXxdZy0Oo',
-    appId: '1:95237292376:android:4e13728ffecba1f9af252d',
-    messagingSenderId: '95237292376',
-    projectId: 'nin2byo2i',
-    storageBucket: 'nin2byo2i.appspot.com',
+    apiKey: 'AIzaSyBXOzE5KD-gi3oZ3n4OGceFp8c2Y2606ao',
+    appId: '1:584831002106:android:9663c20782bb6b0f65b043',
+    messagingSenderId: '584831002106',
+    projectId: 'nutrifyapp-c6a13',
+    storageBucket: 'nutrifyapp-c6a13.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
@@ -64,8 +72,10 @@ class DefaultFirebaseOptions {
     messagingSenderId: '95237292376',
     projectId: 'nin2byo2i',
     storageBucket: 'nin2byo2i.appspot.com',
-    androidClientId: '95237292376-5tcrqemuoin5iog9kukd96ksbqhplrq8.apps.googleusercontent.com',
-    iosClientId: '95237292376-um8bl55gico78gmj1ktbrfl6khb3dfe0.apps.googleusercontent.com',
+    androidClientId:
+        '95237292376-5tcrqemuoin5iog9kukd96ksbqhplrq8.apps.googleusercontent.com',
+    iosClientId:
+        '95237292376-um8bl55gico78gmj1ktbrfl6khb3dfe0.apps.googleusercontent.com',
     iosBundleId: 'com.nin20.nin2byo2i',
   );
 

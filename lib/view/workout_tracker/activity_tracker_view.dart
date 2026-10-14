@@ -1072,10 +1072,10 @@ class _WaterTrackerViewState extends State<WaterTrackerView> {
                                                   backgroundColor:
                                                       const Color.fromARGB(
                                                           255, 221, 220, 220),
-                                                  foregrondColor: ratio > 0.99
+                                                  foregroundColor: ratio > 0.99
                                                       ? TColor.primaryColor1
                                                       : TColor.secondaryColor1,
-                                                  // foregrondColor:
+                                                  // foregroundColor:
                                                   //     TColor.primaryColor1,
 
                                                   ratio:

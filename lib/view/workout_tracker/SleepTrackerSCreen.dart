@@ -955,11 +955,11 @@ class _SleepTrackerSCreenState extends State<SleepTrackerSCreen> {
                                           20, // Set the width of the progress bar
                                       backgroundColor:
                                           const Color.fromARGB(255, 221, 220, 220),
-                                      // foregrondColor: index % 2 == 0
+                                      // foregroundColor: index % 2 == 0
                                       //     ? TColor.primaryColor1
                                       //     : TColor.secondaryColor1,
-                                      // foregrondColor: TColor.primaryColor1,
-                                      foregrondColor: ratio > 0.99
+                                      // foregroundColor: TColor.primaryColor1,
+                                      foregroundColor: ratio > 0.99
                                           ? TColor.primaryColor1
                                           : TColor.secondaryColor1,
                                       ratio: ratio, // Set the ratio value

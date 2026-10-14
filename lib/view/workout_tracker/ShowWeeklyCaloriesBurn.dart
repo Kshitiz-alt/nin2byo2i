@@ -583,8 +583,8 @@ class _ShowWeeklyCaloriesBurn extends State<ShowWeeklyCaloriesBurn> {
                                             20, // Set the width of the progress bar
                                         backgroundColor:
                                             const Color.fromARGB(255, 221, 220, 220),
-                                        foregrondColor: TColor.primaryColor1,
-                                        // foregrondColor: index % 2 == 0
+                                        foregroundColor: TColor.primaryColor1,
+                                        // foregroundColor: index % 2 == 0
                                         //     ? TColor.primaryColor1
                                         //     : TColor.secondaryColor1,
                                         ratio: ratio, // Set the ratio value
